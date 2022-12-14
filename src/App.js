@@ -1,4 +1,4 @@
-import './App.css';
+import './index.css';
 import Landing from './components/layout/Landing';
 import Navbar from './components/layout/Navbar';
 import { BrowserRouter as Router, Route,  Routes } from 'react-router-dom';
@@ -10,7 +10,7 @@ function App() {
     <Router>
     <div className='App'>
     <Navbar /> 
-        
+
     </div>
     </Router>
   );

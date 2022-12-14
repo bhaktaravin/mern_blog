@@ -5,6 +5,35 @@
 
 
  class Navbar extends Component{
+  constructor(){
+    super(); 
+    this.state = { isLoggedIn: false}; 
+    this.handleNavbarCollapse = this.handleNavbarCollapse.bind(this);
+  }
+
+
+  componentDidMount(){
+    if(sessionStorage.getItem("isLoggedIn") == "true"){
+      this.setState((prevState) => {
+        if(!prevState.isLoggedIn){
+          return { isLoggedIn: true};
+        }
+      });
+    }
+
+    if(sessionStorage.getItem("isLoggedIn") == "false"){
+      this.setState((prevState) => {
+        if(prevState.isLoggedIn){
+          return { isLoggedIn: false};
+        }
+      });
+    }
+  }
+
+  handleNavbarCollapse(){
+    document.querySelector("#navbarTogglerDemo01").classList.remove("show");
+  }
+
     render(){
         return (
           <nav className="navbar navbar-custom navbar-expand-lg">
