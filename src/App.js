@@ -10,11 +10,7 @@ function App() {
     <Router>
     <div className='App'>
     <Navbar /> 
-      <Routes>
-          <Route exact path="/" element={<Landing />} />
-          <Route path = "/register" element={<Register />} />
-          <Route path = "/login" element = {<Login />}/>
-      </Routes>
+        
     </div>
     </Router>
   );
